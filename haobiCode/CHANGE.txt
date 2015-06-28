@@ -1,0 +1,51 @@
+2015-3-9
+[myetc模块]
+1、修复seg字段问题：忽略seg字段中前后信息中的空格信息
+2、修复item字段问题：忽略item字段中前后信息中的空格信息
+3、添加展现读取到的配置文件字段信息
+
+[myfdcntl模块]
+1、重新修改了GetExeName()函数
+2、添加了GetPathName(), GetFullPathName()函数
+
+2015-3-20
+[myfdcntl模块]
+1、MovFile()函数修改为LINUX可跨文件系统
+
+[myetc模块]
+1、添加了编译一次的代码 #ifndef _MY_ETC_H 宏
+
+2015-3-21
+[myfdcntl模块]
+1、修改了CpFile的逻辑，先link，若跨文件系统则调用CpFileCrossFileSystem()函数
+
+2015-3-25
+[myThread模块]
+1、myThread模块开发完毕
+
+2015-3-29
+[mystr模块]
+1、修改了去除空格的函数代码
+
+[mySplit模块]
+1、将Count()函数后加const修饰
+
+2015-3-6
+[myLog模块]
+1、优化myLog日志模块，提升写日志效率，但是会出现如下两个问题：
+(1) 不能将日志的文件大小限制在阀值内，可能会有小量超标
+(2) 当日期起变化时，可能有小量第二天的数据在上一天的日志文件中
+
+[myThread模块]
+1、将TThreadTask类作小许调整
+
+2015-4-8
+[mystr模块]
+1、重写strreplace函数，以前的写的太复杂且有BUG
+
+[myLog模块]
+1、LogR添加针对WINDOWS的代码，因为WINDOWS不支持打开文件后，对文件进行重命名
+
+2015-4-9
+[myTime模块]
+1、添加了计算时间耗费的函数
